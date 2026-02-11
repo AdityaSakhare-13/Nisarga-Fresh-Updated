@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Leaf, Globe, Search } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Leaf, Globe, Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -55,11 +56,49 @@ const Navbar = () => {
           <button className="hidden md:flex items-center text-white/80 hover:text-accent transition-colors">
             <Globe size={24} />
           </button>
-          <button className="bg-accent hover:bg-accent/90 text-primary px-8 py-2.5 rounded-sm font-bold text-xs tracking-widest uppercase transition-all shadow-lg">
+          <button className="hidden md:block bg-accent hover:bg-accent/90 text-primary px-8 py-2.5 rounded-sm font-bold text-xs tracking-widest uppercase transition-all shadow-lg">
             Partner With Us
+          </button>
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden text-white hover:text-accent transition-colors"
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-primary/98 backdrop-blur-md border-t border-accent/20"
+          >
+            <nav className="flex flex-col py-6 px-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`py-4 text-sm tracking-[0.2em] font-medium transition-colors uppercase border-b border-white/5 ${
+                    isActive(link.path)
+                      ? 'text-accent'
+                      : 'text-white/70 hover:text-accent'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <button className="mt-6 bg-accent hover:bg-accent/90 text-primary px-8 py-3 rounded-sm font-bold text-xs tracking-widest uppercase transition-all shadow-lg">
+                Partner With Us
+              </button>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };
