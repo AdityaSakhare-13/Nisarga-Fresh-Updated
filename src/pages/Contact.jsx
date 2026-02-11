@@ -52,7 +52,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Electronic Correspondence",
-      content: "trade@fruitexportpro.com\nconcierge@fruitexportpro.com",
+      content: "trade@nisargafresh.com\nconcierge@nisargafresh.com",
     },
   ];
 

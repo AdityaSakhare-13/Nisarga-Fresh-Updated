@@ -30,7 +30,7 @@ const Navbar = () => {
               <Leaf className="text-accent" size={24} />
             </div>
             <h2 className="text-white text-xl font-serif font-bold tracking-tight uppercase">
-              FruitExport <span className="text-accent">Pro</span>
+              Nisarga <span className="text-accent">Fresh</span>
             </h2>
           </Link>
           

@@ -14,7 +14,7 @@ const Footer = () => {
                 <Leaf className="text-accent" size={20} />
               </div>
               <span className="text-xl font-serif font-bold uppercase tracking-tight">
-                FruitExport <span className="text-accent">Pro</span>
+                Nisarga <span className="text-accent">Fresh</span>
               </span>
             </Link>
             <p className="text-slate-400 font-light text-sm leading-relaxed mb-10 max-w-xs">
@@ -115,7 +115,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] font-medium tracking-[0.2em] text-white/40 uppercase">
-            © 2024 FruitExport Pro. Defining the Standard.
+            © 2024 Nisarga Fresh. Defining the Standard.
           </p>
           <div className="flex gap-10 text-[10px] font-medium tracking-[0.2em] text-white/40 uppercase">
             <a href="#" className="hover:text-white transition-colors">

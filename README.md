@@ -1,4 +1,4 @@
-# FruitExport Pro - Premium Fruit Import/Export Website
+# Nisarga Fresh - Premium Fruit Import/Export Website
 
 A modern, responsive website for a premium fruit import/export business built with React.js, Tailwind CSS, and Framer Motion.
 
@@ -31,7 +31,7 @@ A modern, responsive website for a premium fruit import/export business built wi
 ## 📁 Project Structure
 
 ```
-fruitexport-pro/
+nisarga-fresh/
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.jsx          # Reusable navigation component
@@ -67,7 +67,7 @@ fruitexport-pro/
 
 2. **Navigate to the project directory**
    ```bash
-   cd fruitexport-pro
+   cd nisarga-fresh
    ```
 
 3. **Install dependencies**
@@ -237,12 +237,12 @@ Potential additions:
 ## 📞 Support
 
 For questions or issues, please contact:
-- Email: trade@fruitexportpro.com
+- Email: trade@nisargafresh.com
 - Website: Contact form on `/contact` page
 
 ## 📄 License
 
-This project is created for FruitExport Pro.
+This project is created for Nisarga Fresh.
 
 ## 🙏 Acknowledgments
 
